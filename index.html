@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brick Break</title>
+  <!-- holds all styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- ico -->
+  <link rel="shortcut icon" href="assets/arcadeIcoForGame.ico">
+</head>
+
+<body>
+  <!-- holds entire game -->
+  <div id="gameUI">  <!--acts as an arcade marque around game-->
+    <div class="ui-top">
+      <p class="game-logo">Brickz</p>
+      </div>
+    </div>
+
+    <div class="ui-bottom">
+      <div class="game-timer-wrap">
+        <span class="game-timer-label">time</span>
+        <p class="game-timer-val">00</p>
+      </div>
+      <div class="current-score-wrap">
+        <span class="current-score-label">score</span>
+        <p class="current-score-val">0</p>
+      </div> 
+    </div>
+    
+    <!-- intro game screen -->
+    <div id="splash-page">
+      <button class="start-game-btn">start</button>
+    </div>
+    
+    <!-- actual game screen -->
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <!-- end game screen -->
+    <div id="game-end-screen" style="display: none;">
+      <p class="high-score-banner">High Scores</p>
+      <div class="high-score-container">
+        <!-- highscores will eventually be rendered here -->
+        <p class="high-score-intials"></p>
+        <p class="high-score-val"></p>
+      </div>
+      <img class="replay-game-btn" src="./assets/redoIcon.png" alt="play again button">
+    </div>
+
+    <!-- game audio library -->
+    <audio preload="auto" src="./assets/paddleHit.wav" class="paddleHitAudio"></audio>
+    <audio preload="auto" src="./assets/coinSound.wav" class="brickCrumbleAudio"></audio>
+    <audio preload="auto" src="./assets/gameStart.wav" class="gameStartAudio"></audio>
+    <audio preload="auto" src="./assets/gameOver.wav" class="gameOverAudio"></audio>
+
+  </div>
+  <!-- links to nearly all game logic -->
+  <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+@font-face {
+  /* primary app font */
+  font-family: 'arcade';
+  src: url('./assets/arcadeFont.woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./assets/blackBrickWallpaper.png');
+  background-repeat: repeat;
+  font-family: 'arcade';
+}
+
+canvas {
+  background: #eee;
+  display: block;
+  margin: 0 auto;
+  width: 70vw;
+  height: auto;
+}
+
+/* game UI =====================================================*/
+#gameUI {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.ui-top {
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: bottom;
+}
+
+.game-logo{
+  font-size: 2.8rem;
+  text-align: center;
+  color: white;
+}
+
+
+.ui-bottom {
+  height: 4rem;
+  display: flex;
+  color: white;
+  font-size: 2rem;
+}
+
+/* timer =======================================================*/
+.game-timer-wrap {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.game-timer-label {
+  margin-right: 2rem;
+}
+
+.game-timer-val {
+  text-align: center;
+}
+
+/* score */
+.current-score-wrap {
+  justify-content: center;
+  width: 50%;
+  display: flex;
+}
+
+.current-score-label {
+  margin-right: 2rem;
+}
+
+.current-score {
+  width: 50%;
+  text-align: center;
+}
+
+/* splash page =================================================*/
+#splash-page {
+  display: flex;
+  justify-content: center;
+  padding: 8rem;
+}
+
+.start-game-btn {
+  color: black;
+  font-family: 'arcade';
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.start-game-btn:hover {
+  cursor: pointer;
+}
+
+/* game end screen ============================================= */
+#game-end-screen {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.replay-game-btn {
+  width: 3rem;
+  margin-top: 2rem;
+}
+
+.replay-game-btn:hover {
+  cursor: pointer;
+}
+
+.high-score-container {
+  /* holds vals returned from local storage regarding high score */
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.high-score-banner {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;  
+}
+
+.high-score-container p {
+  margin: auto 1rem auto 1rem;
+}

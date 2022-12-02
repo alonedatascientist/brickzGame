@@ -1,0 +1,12 @@
+DEV NOTES ========================================================
+
+CURRENT TASKS:
+* make highScores hold top 3 scores (instead of just one)
+responsive design (should work down to mobile, do after all JS is done)
+
+
+FUTURE FEATURE IDEAS
+* timer component, fast completion could give player a score bonus
+* a way to upgrade the current high score functionality to include the last 3 highest scores 
+* upgrade game end so that the page doesn't have to refresh
+

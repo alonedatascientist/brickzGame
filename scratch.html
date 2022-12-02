@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // POSSIBLE SOLUTION TO ADDING MORE VALUES TO HIGH SCORES 
+    
+    let currentScore = 500
+    let playerIntials = 'set'
+
+    function checkForHighScore(playerIntials, currentScore) {
+      let highScores = localStorage.getItem('highScores')
+      let highScoresObj = JSON.parse(highScores)
+      
+      for (let i = 0; i < highScoresObj.length; i++) {
+        if (currentScore > highScoresObj[i].score) {
+          highScoresObj[i].intials = playerIntials
+          highScoresObj[i].score = currentScore
+          break
+        }
+        else {
+          continue
+        }
+      }
+      saveCurrentHighScoreToLocal(playerIntials, currentScore)
+    }
+
+    function saveCurrentHighScoreToLocal(initials, score) {
+    // save high score to local storage
+    let scoreEntry = JSON.stringify({initials: initials, score: score})
+    localStorage.setItem('highScores', scoreEntry)
+  }    
+
+    checkForHighScore(currentScore, playerIntials)
+    
+
+
+  </script>
+</body>
+</html>
