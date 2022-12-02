@@ -192,7 +192,7 @@ function handleGameOver() {
     renderHighScoresForGameOverScreen()
     clearRoundValues() // clear round score
     handleGameOverScreen() // hide canvas, show game end screen
-  }, 1000)
+  }, 3000)
   clearInterval(interval); // Needed for Chrome to end game
 }
 
